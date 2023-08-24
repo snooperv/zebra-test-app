@@ -33,7 +33,7 @@ export default {
   },
 
   async mounted() {
-    const data = await requestData("http://flems.github.io/test/api/news/");
+    const data = await requestData("https://flems.github.io/test/api/news/");
     this.setValues(data);
   },
 
@@ -48,7 +48,7 @@ export default {
       if (this.nav.current < this.nav.total) {
         this.nav.current++;
         const data = await requestData(
-          `http://flems.github.io/test/api/news/${this.nav.current}`,
+          `https://flems.github.io/test/api/news/${this.nav.current}`,
         );
         this.setValues(data);
       }
